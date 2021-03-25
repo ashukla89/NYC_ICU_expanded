@@ -1,0 +1,84 @@
+---
+headline: "ICU Capacity in NYC Shrank Over the Winter and Remains Low"
+kicker: ""
+---
+
+{{!< bootstrap}}
+
+<div class="row mt-3">
+  <div class="col-12">
+
+    <p>The winter surge of the COVID-19 cases translated directly into greater strain on hospitals in New York City. More sick patients meant more overworked medical staff-- and more ICU beds occupied.</p>
+    <p>Ominously, that strain persists. ICU beds remain in highly limited supply; many of those beds are currently occupied by confirmed or suspected COVID-19 patients.</p>
+  <p>The map below shows the situation today: most, but not all, of New York's hospitals have severely strained ICU bed capacity. Darker shades indicate a greater share of occupied ICU beds, while lighter shades indicate more moderate capacity. Only a few large hospitals remain relatively unfilled, among them Mount Sinai on the Upper East Side and New York Presbyterian in Queens.</p>
+
+    {{> nyc_icu/chart-a }}
+
+    <p>As it turns out, the situation today is worse than virtually any other time during the winter. After all, despite a national collapse in positive COVID-19 cases, numbers of positive cases in New York City have remained stubbornly high.</p>
+      <p>In fact, the strain on hospitals in outer boroughs like the Bronx and Queens increased not only through the Holidays, but through the month of January as well. Bed capacity has yet to ease up in any borough, and remains close to its recent peak in both Brooklyn and Staten Island.</p>
+    <!-- {{> nyc_icu/chart-b }} -->
+    {{> nyc_icu/chart-c }}
+
+  </div>
+</div>
+
+<!-- A few custom styles for this particular homework -->
+
+<style>
+  svg { 
+    display: block;
+    margin: 0 auto;
+  }
+
+  h1 { margin-bottom: 2rem; }
+
+  body {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  h3 { 
+    margin-top: 3rem; 
+    margin-bottom: 1rem;
+  }
+
+  .container {
+    max-width: 66rem;
+  }
+
+  img.block {
+    display: block;
+    border: solid #333 1p;
+    margin: 0 auto;
+  }
+
+  .sphere {
+    fill: none;
+    stroke: #000;
+    stroke-width: 3px;
+  }
+
+/*      .fill {
+    fill: #fff;
+  }
+*/
+  .graticule {
+    fill: none;
+    stroke: #777;
+    stroke-width: .5px;
+    stroke-opacity: .5;
+  }
+
+  h3 small {
+    background: #fff880;
+  }
+
+  #chart-6 svg {
+    display: inline;
+  }
+</style>
+
+<!-- A few extra styles to make things responsive even in Bootstrap -->
+<link rel="stylesheet" href="styles/responsive.css">
+
+<script src="scripts/scrollytelling.js"></script>
